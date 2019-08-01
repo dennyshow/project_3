@@ -1,0 +1,13 @@
+{% extends 'index.html'%}
+{% block content %}
+
+    {% for recipe in recipes %}
+        {{recipe.recipe_name}}
+        {{recipe.cuisine_name}}
+        {{recipe.recipe_ingredients}}
+        {{recipe.recipe_allergens}}
+        {{recipe.recipe_methods}}
+        {{recipe.recipe_origin}}
+    {% endfor %}
+    
+{% endblock %}
