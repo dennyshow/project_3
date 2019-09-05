@@ -1,0 +1,40 @@
+{% extends 'index.html'%} {% block content %} 
+
+
+<h2>View Cuisine</h2>
+
+    <ul>
+        {% for cuisine in cuisines %}
+           
+               
+        <li> Cuisine: {{cuisine.cuisine}} </li>
+        <li> Country of origin: {{cuisine.country}}</li>
+        <li> Allergens: {{cuisine.allergens}}</li>
+            
+        
+        <li>
+        Ingredients:
+        <ol>
+            {% for ingredient in cuisine.ingredients %}
+             <li><span> {{ingredient}} </span></li>
+             {% endfor %}
+        </ol>
+        </li>
+        <li>
+        Methods:
+        <ol>
+            {% for method in cuisine.methods %}
+             <li><span> {{method}} </span></li>
+             {% endfor %}
+        </ol>
+        </li>
+        
+       
+        
+      {% endfor %}  
+    </ul>
+  
+
+
+{% endblock %}
+

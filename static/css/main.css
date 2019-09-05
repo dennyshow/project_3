@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Overlock:400,700,900');
+
+body {
+    margin:0;
+    background: url(https://img.freepik.com/free-photo/border-from-ingredients-cooking_23-2147749525.jpg?size=626&ext=jpg) no-repeat  fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+
+nav .brand-logo {
+    color: #564848;
+    /*color: white;*/
+    font-family: Overlock, sans-serif;
+}
+
+nav ul a {
+    font-family: Overlock, sans-serif;
+}
+
+
+
+.overlay {
+    background-color: #000;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    opacity: 0.75;
+    z-index: -1;
+}
+
+
+
+
+.select-wrapper {
+    color: #F8F4F1;
+}
+
+.layout {
+    padding-bottom: 10px;
+}
+
+h3,h1  {
+    color: red;
+    text-transform: uppercase; 
+    text-align: center;
+    font-family: Overlock;
+    font-weight: 600;
+    
+}
+
+.card .card-image .card-title {
+    color: darkred;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.btn {
+    position: relative;
+    left: 30%;
+}
+
+.btn-large{
+    background-color: #9a2c0b;
+}
+
+.material-icons {
+    color: white;
+}
+
+ul , ol {
+    color: white;
+}
+
+.materialize-textarea, .validate {
+    color: white;
+}
+
+#imageName {
+    color: white;
+    padding-left: 10px;
+}
+
+/*.fit-card {*/
+/*    max-width: 80%;*/
+/*    margin: 2.25px auto;*/
+/*}*/
+
+
+/*.card {*/
+/*    max-width: 100%;*/
+    
+/*}*/
+
+/*.card-fit {*/
+/*    max-width: 80%;*/
+/*    margin:2.5px auto;*/
+/*}*/
+
+.filter .select-wrapper {
+    margin-right: 50px;
+}

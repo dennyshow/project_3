@@ -1,0 +1,39 @@
+{% extends 'index.html'%} {% block content %} 
+
+
+<h3>View Recipe</h3>
+
+    <ul>
+        {% for recipe in recipes %}
+           
+               
+        <li> Recipe: {{recipe.recipe}} </li>
+        <li> Country of origin: {{recipe.country}}</li>
+        <li> Allergens: {{recipe.allergens}}</li>
+            
+        
+        <li>
+        Ingredients:
+        <ol>
+            {% for ingredient in recipe.ingredients %}
+             <li><span> {{ingredient}} </span></li>
+             {% endfor %}
+        </ol>
+        </li>
+        <li>
+        Methods:
+        <ol>
+            {% for method in recipe.methods %}
+             <li><span> {{method}} </span></li>
+             {% endfor %}
+        </ol>
+        </li>
+        
+       
+        
+      {% endfor %}  
+    </ul>
+  
+
+
+{% endblock %}
