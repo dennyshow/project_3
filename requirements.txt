@@ -15,6 +15,7 @@ botocore==1.12.194
 bzr==2.6.0
 certifi==2019.6.16
 chardet==3.0.4
+Cheetah==2.4.4
 chevron==0.13.1
 click==6.7
 cloud-init==0.7.6
@@ -52,9 +53,11 @@ jsonschema==2.6.0
 kitchen==1.1.1
 lazy-object-proxy==1.4.1
 lockfile==0.8
+Markdown==3.1.1
 MarkupSafe==1.1.1
 mccabe==0.6.1
 mercurial==4.2.3
+oauth==1.0.1
 paramiko==1.15.1
 parso==0.1.1
 pathlib2==2.3.4
@@ -62,6 +65,7 @@ pbr==5.4.1
 PIL==1.1.6
 ply==3.4
 poyo==0.4.2
+prettytable==0.7.2
 pyasn1==0.4.5
 pycrypto==2.6.1
 pycurl==7.19.0
@@ -71,6 +75,7 @@ pylint==1.8.1
 pylint-django==0.8.0
 pylint-flask==0.5
 pylint-plugin-utils==0.5
+pyserial==3.4
 pystache==0.5.3
 python-daemon==1.5.2
 python-dateutil==2.8.0
