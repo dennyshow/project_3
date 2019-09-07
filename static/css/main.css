@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Overlock:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Overlock:400,700,900|Londrina+Solid:100,300,400,900');
 
 body {
     margin:0;
@@ -51,10 +51,26 @@ h3,h1  {
     
 }
 
+.card-fitting{
+    width: 100%;
+    height: 70vh;
+    
+}
+
+.main-images {
+    
+    height: 35vh;
+    float: none;
+}
+
+
 .card .card-image .card-title {
-    color: darkred;
-    max-height: 100%;
-    max-width: 100%;
+    color: #AF4319;
+    font-family: Londrina+Solid;
+    font-size: larger;
+    font-weight: 900;
+    
+    
 }
 
 .btn {
@@ -70,9 +86,22 @@ h3,h1  {
     color: white;
 }
 
-ul , ol {
+input {
     color: white;
 }
+
+ul , ol {
+    color: white;
+    font-family: Overlock, sans-serif;
+    font-size: large;
+    font-weight: 500;
+
+}
+
+.list-headers {
+   text-decoration: uppercase;
+}
+
 
 .materialize-textarea, .validate {
     color: white;
@@ -83,21 +112,6 @@ ul , ol {
     padding-left: 10px;
 }
 
-/*.fit-card {*/
-/*    max-width: 80%;*/
-/*    margin: 2.25px auto;*/
-/*}*/
-
-
-/*.card {*/
-/*    max-width: 100%;*/
-    
-/*}*/
-
-/*.card-fit {*/
-/*    max-width: 80%;*/
-/*    margin:2.5px auto;*/
-/*}*/
 
 .filter .select-wrapper {
     margin-right: 50px;

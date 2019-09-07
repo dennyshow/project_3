@@ -20,13 +20,12 @@
             {% for recipe in recipes %}
 
             <div class="col s12 m12 l6">
-              <div class="fit-card">
+              <div class="card-fitting">
                 <ul class="card">
-
                     <li class="card-image waves-effect waves-block waves-light">
                         {% if not recipe.image %}
-                        <img class="card-fit" src="{{ url_for('static', filename='images/default.jpg') }}"> {% else %}
-                        <img class="" src="{{ url_for('static', filename='images/') }}{{recipe.image}}"> {% endif %}
+                        <img class="" src="{{ url_for('static', filename='images/default.jpg') }}"> {% else %}
+                        <div class="main-images"><img class="" src="{{ url_for('static', filename='images/') }}{{recipe.image}}"> {% endif %}</div>
                         <span class="card-title headers">{{recipe.recipe}}</span>
                     </li>
 
@@ -35,11 +34,10 @@
                         <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}">Edit</a>
                         <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}">Delete</a>
                     </li>
-
+                  
                 </ul>
-
+                </div>
             </div>
-         </div>
 
             {% endfor %}
         </div>
