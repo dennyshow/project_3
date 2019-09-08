@@ -52,15 +52,15 @@ h3,h1  {
 }
 
 .card-fitting{
-    width: 100%;
+    max-width: 100%;
     height: 70vh;
     
 }
 
 .main-images {
-    
+   
     height: 35vh;
-    float: none;
+  
 }
 
 

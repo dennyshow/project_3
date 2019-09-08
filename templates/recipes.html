@@ -24,8 +24,9 @@
                 <ul class="card">
                     <li class="card-image waves-effect waves-block waves-light">
                         {% if not recipe.image %}
-                        <img class="" src="{{ url_for('static', filename='images/default.jpg') }}"> {% else %}
-                        <div class="main-images"><img class="" src="{{ url_for('static', filename='images/') }}{{recipe.image}}"> {% endif %}</div>
+                        <div class="main-images"><img src="{{ url_for('static', filename='images/default.jpg') }}" alt="default images"></div> {% else %}
+                        <div class="main-images"><img src="{{ url_for('static', filename='images/') }}{{recipe.image}}" alt="Recipe images"></div>
+                        {% endif %}
                         <span class="card-title headers">{{recipe.recipe}}</span>
                     </li>
 
