@@ -73,10 +73,11 @@ h3,h1  {
     
 }
 
-.btn {
-    position: relative;
-    left: 30%;
-}
+/*span > .btn {*/
+/*    color: #ab4730;*/
+/*    position: relative;*/
+/*    left: 30%;*/
+/*}*/
 
 .btn-large{
     background-color: #9a2c0b;
@@ -98,10 +99,6 @@ ul , ol {
 
 }
 
-.list-headers {
-   text-decoration: uppercase;
-}
-
 
 .materialize-textarea, .validate {
     color: white;
@@ -109,7 +106,14 @@ ul , ol {
 
 #imageName {
     color: white;
-    padding-left: 10px;
+    padding: 0px 0px 20px 10px;
+    
+}
+
+.image-align {
+    
+    margin: 0 auto;
+    padding: 45px;
 }
 
 

@@ -13,9 +13,9 @@
             
                  <li class="card-image waves-effect waves-block waves-light">
                     {% if not cuisine.image %}
-                    <img class="" src="{{ url_for('static', filename='images/default.jpg') }}"> 
+                    <div class="main-images"><img src="{{ url_for('static', filename='images/default.jpg') }}"></div>
                     {% else %}
-                    <img class="" src="{{ url_for('static', filename='images/') }}{{cuisine.image}}"> 
+                    <div class="main-images"><img src="{{ url_for('static', filename='images/') }}{{cuisine.image}}"></div>
                     {% endif %}
                     <span class="card-title headers">{{cuisine.cuisine}}</span>
                 </li>
