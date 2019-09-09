@@ -7,12 +7,12 @@
         {% for recipe in recipes %}
            
                
-        <li> Recipe: {{recipe.recipe}} </li>
-        <li> Country of origin: {{recipe.country}}</li>
-        <li> Allergens: {{recipe.allergens}}</li>
+        <li class="recipe-name"> Recipe: <span>{{recipe.recipe}}</span> </li>
+        <li class="country-name"> Country of origin: {{recipe.country}}</li>
+        <li class="allergen-type"> Allergens: {{recipe.allergens}}</li>
             
         
-        <li>
+        <li class="ingredient-list">
         Ingredients:
         <ol>
             {% for ingredient in recipe.ingredients %}
@@ -20,7 +20,7 @@
              {% endfor %}
         </ol>
         </li>
-        <li>
+        <li class="method-list">
         Methods:
         <ol>
             {% for method in recipe.methods %}
