@@ -1,32 +1,42 @@
 {% extends 'index.html'%} {% block content %}
 
 
+                                        {# CUISINE SECTION #}
+                                        
+                                        
 <div class="row">
-    <div class="col s12 m12">
+    <div class="col s12 m12 l12">
 
-        <h1 class="headers">Cuisine</h1>
+        <h1>Cuisine</h1>
         {% for cuisine in cuisines %}
-        
+
         <div class="col s12 m12 l6">
-            <div id="selector"></div>
-            <ul class="card">
-            
-                 <li class="card-image waves-effect waves-block waves-light">
-                    {% if not cuisine.image %}
-                    <div class="main-images"><img src="{{ url_for('static', filename='images/default.jpg') }}"></div>
-                    {% else %}
-                    <div class="main-images"><img src="{{ url_for('static', filename='images/') }}{{cuisine.image}}"></div>
-                    {% endif %}
-                    <span class="card-title headers">{{cuisine.cuisine}}</span>
-                </li>
+            <div class="card-fitting">
+                <ul class="card">
 
-                <li class="card-content card-action">
-                    <a href="{{url_for('view_cuisine', cuisine_id=cuisine._id)}}">View</a>
-                    <a href="{{url_for('edit_cuisine', cuisine_id=cuisine._id)}}">Edit</a>
-                    <a href="{{url_for('delete_cuisine', cuisine_id=cuisine._id)}}">Delete</a>
-                </li>
+                    <li class="card-image waves-effect waves-block waves-light">
+                        
+                        {# statement to apply if/no image is attached #} 
+                        
+                        {% if not cuisine.image %}
+                        <div class="main-images"><img src="{{ url_for('static', filename='images/default.jpg') }}"></div>
+                        {% else %}
+                        <div class="main-images"><img src="{{ url_for('static', filename='images/') }}{{cuisine.image}}"></div>
+                        {% endif %} 
+                        
+                        {# end of if statement #}
+                        <span class="card-title headers">{{cuisine.cuisine}}</span>
+                        
+                    </li>
 
-            </ul>
+                    <li class="card-content card-action">
+                        <a href="{{url_for('view_cuisine', cuisine_id=cuisine._id)}}">View</a>
+                        <a href="{{url_for('edit_cuisine', cuisine_id=cuisine._id)}}">Edit</a>
+                        <a href="{{url_for('delete_cuisine', cuisine_id=cuisine._id)}}">Delete</a>
+                    </li>
+
+                </ul>
+            </div>
         </div>
 
         {% endfor %}
@@ -34,14 +44,15 @@
     </div>
 </div>
 
+                                    {# Button Start #}
+
 <div class="row">
     <div class="col s12 m12">
         <div class=" col s12 m12 l6">
-
-            <a href="{{url_for('add_cuisine')}}" class="waves-effect waves-light btn-large">Add Cuisine</a>
+            <a href="{{url_for('add_cuisine')}}" class="waves-effect waves-light btn-large"><i class="material-icons right">add</i>Add Cuisine</a>
         </div>
     </div>
 </div>
-
+                                    {# Button End #}
 
 {% endblock %}

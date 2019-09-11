@@ -9,6 +9,10 @@ from constants import country_mapping, cuisine_mapping
 
 app = Flask(__name__)
 
+            # config for WTForms
+            # config for image storage 
+            # config for MONGO DB
+
 app.config['SECRET_KEY'] = 'any secret key'
 app.config['IMAGES_FOLDER'] = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'static/images/')
 app.config["MONGO_DBNAME"] = 'diy_cookery'
@@ -17,10 +21,15 @@ app.config["MONGO_URI"] = "mongodb+srv://root:r00tUser@myfirstcluster-q10cc.mong
 mongo = PyMongo(app)
 
 
+                                    ####### RECIPES #####
+
 
 
 @app.route('/', methods=['GET', 'POST'])
 def get_recipes():
+    
+        # creating and passing url params
+        # creating and passing request.args
     
     cuisine, country = None, None
     
@@ -33,14 +42,19 @@ def get_recipes():
         recipes = mongo.db.recipes.find({
                                     '$or': [dict(country=country), dict(cuisine=cuisine)]
         })
-        # recipes = mongo.db.recipes.find(dict(country=country, cuisine=cuisine)) 
+         
+        # Passing result of args into filters
+        # And passing each matching _id into filters
+
         result = []
         for recipe in recipes:
             recipe_ = dict(cuisine=recipe['cuisine'], recipe=recipe['recipe'], allergens=recipe['allergens'], ingredients=recipe['ingredients'],
-            methods=recipe['methods'], country=recipe['country'], image=recipe.get('image'))
+            methods=recipe['methods'], country=recipe['country'], image=recipe.get('image'), _id=recipe['_id'])
             result.append(recipe_)
     else:
         result=mongo.db.recipes.find()
+
+       # using POST method to determine filter-form on request
         
     form = FilterForm()
     if request.method == "POST":
@@ -51,7 +65,7 @@ def get_recipes():
     
 
 
-
+                                ####### Pre-population of Form Fields #####
 
 def populate_form(form_data, image_name=None):
     form_data['country'] = country_mapping[form_data.get('country')]
@@ -64,6 +78,7 @@ def populate_form(form_data, image_name=None):
     return form_data
     
 
+                            ####### ADDING RECIPE #####
 
 
     
@@ -96,14 +111,19 @@ def add_recipe():
 
 
         
+                        ####### VIEW RECIPE #####
+
+        
+        
     
-@app.route('/view_recipe/<recipe_id>')
+@app.route('/view_recipe/<recipe_id>', methods=["GET", "POST"])
 def view_recipe(recipe_id):
     all_recipes = mongo.db.recipes.find({"_id": ObjectId(recipe_id)})
     return render_template("viewrecipe.html", recipes = all_recipes)
-    
 
 
+
+                    ####### EDIT RECIPE #####
 
 
   
@@ -146,6 +166,7 @@ def edit_recipe(recipe_id):
     return render_template('editrecipe.html', recipe = the_recipe, form = form, cuisines=all_cuisines, countries=all_countries)
     
 
+                ####### DELETE RECIPE #####
 
     
 
@@ -156,7 +177,7 @@ def delete_recipe(recipe_id):
    
    
    
-    #Cuisines
+                        ####### CUISINES #####
     
 
 
@@ -169,6 +190,8 @@ def get_cuisines():
     return render_template("cuisines.html",
     cuisines=cuisines)
 
+
+                     ####### ADDING CUISINE #####
 
  
     
@@ -200,6 +223,8 @@ def add_cuisine():
     
 
 
+                     ####### VIEW CUISINE #####
+
     
 @app.route('/view_cuisine/<cuisine_id>')
 def view_cuisine(cuisine_id):
@@ -207,6 +232,8 @@ def view_cuisine(cuisine_id):
     return render_template("viewcuisine.html", cuisines = all_cuisines)
     
  
+ 
+                    ####### EDIT CUISINE #####
 
 
   
@@ -249,10 +276,7 @@ def edit_cuisine(cuisine_id):
     
 
 
-@app.route('/test')
-def test1():
-    return redirect(url_for('get_recipes', name="olumide"))
-    
+                    ####### DELETE CUISINE #####
 
 
 @app.route('/delete_cuisine/<cuisine_id>')
@@ -260,6 +284,8 @@ def delete_cuisine(cuisine_id):
     mongo.db.cuisines.remove({'_id': ObjectId(cuisine_id)})
     return redirect(url_for('get_cuisines'))
     
+            
+        
     
     
 

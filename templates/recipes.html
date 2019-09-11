@@ -1,58 +1,68 @@
 {% extends 'index.html'%} {% block content %}
 
 
+                                        {# RECIPE SECTION #}
+                                        
 
 <div class="row">
     <div class="col s12 m12 l12">
-        
-        <h1 class="headers">Recipe</h1>
+
+        <h1>Recipe</h1>
         <div class="input-field col s12 m12 l12">
-            <form class="filter" action="" method="POST">
-                {{ form.cuisine(class="col s4") }}
-                {{ form.country(class="col s4") }}
-                 <button class="btn-large waves-effect waves-light" type="submit" name="action">Filter Recipe
-                    <i class="material-icons right">filter</i>
+
+                                            {# filter form #}
+                                            
+            <form novalidate class="filter" action="" method="POST" enctype="multipart/form-data">
+                {{ form.cuisine(class="col s5 m4") }} {{ form.country(class="col s5 m4") }}
+                <button class="btn-large waves-effect waves-light col s12 m3 filter-btn" type="submit" name="action">Filter Recipe
+                    <i class="material-icons right">filter_list</i>
                  </button>
             </form>
+                                        {# end of filter form #}
+            
         </div>
-    
-        <div id="filtered"  style="display: block">
+
+        <div id="filtered" style="display: block">
             {% for recipe in recipes %}
 
             <div class="col s12 m12 l6">
-              <div class="card-fitting">
-                <ul class="card">
-                    <li class="card-image waves-effect waves-block waves-light">
-                        {% if not recipe.image %}
-                        <div class="main-images"><img src="{{ url_for('static', filename='images/default.jpg') }}" alt="default images"></div> {% else %}
-                        <div class="main-images"><img src="{{ url_for('static', filename='images/') }}{{recipe.image}}" alt="Recipe images"></div>
-                        {% endif %}
-                        <span class="card-title headers">{{recipe.recipe}}</span>
-                    </li>
+                
+                                            {# Card Start #}
+                <div class="card-fitting">
+                    <ul class="card">
+                        <li class="card-image waves-effect waves-block waves-light">
+                            {% if not recipe.image %}
+                            <div class="main-images"><img src="{{ url_for('static', filename='images/default.jpg') }}" alt="default images"></div>
+                            {% else %}
+                            <div class="main-images"><img src="{{ url_for('static', filename='images/') }}{{recipe.image}}" alt="Recipe images"></div>
+                            {% endif %}
+                            <span class="card-title headers">{{recipe.recipe}}</span>
+                        </li>
 
-                    <li class="card-content card-action">
-                        <a href="{{url_for('view_recipe', recipe_id=recipe._id)}}">View</a>
-                        <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}">Edit</a>
-                        <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}">Delete</a>
-                    </li>
-                  
-                </ul>
+                        <li class="card-content card-action">
+                            <a href="{{url_for('view_recipe', recipe_id=recipe._id)}}">View</a>
+                            <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}">Edit</a>
+                            <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}">Delete</a>
+                        </li>
+
+                    </ul>
                 </div>
+                                            {# Card End #}
+                
             </div>
 
             {% endfor %}
         </div>
     </div>
 </div>
-
+                                            {# Button Start #}
 <div class="row">
     <div class="col s12 m12">
         <div class=" col s12 m12 l6">
-
             <a href="{{url_for('add_recipe')}}" class="waves-effect waves-light btn-large"><i class="material-icons right">add</i>Add Recipe</a>
-            
         </div>
     </div>
 </div>
+                                            {# Button End #}
 
 {% endblock %}

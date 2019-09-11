@@ -1,55 +1,79 @@
 {% extends 'index.html'%} {% block content %}
 
+                                      {# ADD CUISINE SECT #}
+
 <h3>Add Cuisine</h3>
 <div class="row">
+
+                                        {# FORM START #}
+
     <form novalidate action="" method="POST" enctype="multipart/form-data" class="col s12">
-        {{form.hidden_tag()}}
+        {{form.hidden_tag()}} 
+        
+                                        {# SelectField Start #}
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">restaurant_menu</i> {{ form.cuisine }} {% for error in form.cuisine.errors %}
+                <span style="color: red"> {{ error }}</span> {% endfor %}
+            </div>
+        </div>
+                                        {# SelectField End #} 
+                                        
+                                        {# FielField Start #}
+
+        <div id="imageName" class="input-field col s12">
+            <i class="material-icons prefix"> attachment </i> {{ form.file(type="file") }}
+        </div>
+                                        {# FileField End #} 
+                                    
+                                    
+                                        {# TextArea Start #}
+
+        <div class="input-field col s12">
+            <i class="material-icons prefix">restaurant</i> {{ form.recipe.label }} {{ form.recipe(class='validate')}} {% for error in form.recipe.errors %}
+            <span style="color: red"> {{ error }}</span> {% endfor %}
+        </div>
+        <div class="input-field col s12">
+            <i class="material-icons prefix"> whatshot</i> {{ form.allergens.label }} {{ form.allergens(class='validate')}} {% for error in form.allergens.errors %}
+            <span style="color: red"> {{ error }}</span> {% endfor %}
+        </div>
+
+                                          {# TextArea End #}
+                                            
+                                            {# TextArea Start #}
+                                            
+        <div class="input-field col s12">
+            <i class="material-icons prefix">room_service</i> {{ form.ingredients.label }} {{ form.ingredients(class='materialize-textarea', placeholder="Use semicolon to separate steps")}} {% for error in form.ingredients.errors %}
+            <span style="color: red"> {{ error }}</span> {% endfor %}
+        </div>
+        <div class="input-field col s12">
+            <i class="material-icons prefix">menu</i> {{ form.methods.label }} {{ form.methods(class='materialize-textarea', placeholder="Use semicolon to separate steps") }} {% for error in form.methods.errors %}
+            <span style="color: red"> {{ error }}</span> {% endfor %}
+        </div>
+
+                                           {# TextArea End #}
+                                       
+                                        {# SelectField Start #}
 
         <div class="row">
             <div class="input-field col s12">
-                <i class="material-icons prefix">restaurant_menu</i> {{ form.cuisine }}
+                <i class="material-icons prefix">public</i> {{ form.country }}
             </div>
-            {% for error in form.cuisine.errors %}
+            {% for error in form.country.errors %}
             <span style="color: red"> {{ error }}</span> {% endfor %}
+        </div>
 
+                                       {# SelectField End #} 
+                                       
+                                        {# Button Start #}
 
-            <div class="input-field col s12">
-                <i class="material-icons prefix"> attachment </i> {{ form.file(type="file") }}
-            </div>
-
-            <div class="input-field col s12">
-
-                <i class="material-icons prefix">restaurant</i> {{ form.recipe.label }} {{ form.recipe(class='validate')}} {% for error in form.recipe.errors %}
-                <span style="color: red"> {{ error }}</span> {% endfor %}
-
-            </div>
-            <div class="input-field col s12">
-                <i class="material-icons prefix"> whatshot</i> {{ form.allergens.label }} {{ form.allergens(class='validate')}} {% for error in form.allergens.errors %}
-                <span style="color: red"> {{ error }}</span> {% endfor %}
-            </div>
-            <div class="input-field col s12">
-                <i class="material-icons prefix">room_service</i> {{ form.ingredients.label }} {{ form.ingredients(class='materialize-textarea', placeholder="Use semicolon to separate steps")}} {% for error in form.ingredients.errors %}
-                <span style="color: red"> {{ error }}</span> {% endfor %}
-            </div>
-            <div class="input-field col s12">
-                <i class="material-icons prefix">menu</i> {{ form.methods.label }} {{ form.methods(class='materialize-textarea', placeholder="Use semicolon to separate steps") }} {% for error in form.methods.errors %}
-                <span style="color: red"> {{ error }}</span> {% endfor %}
-            </div>
-
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">public</i> {{ form.country }}
-                </div>
-                {% for error in form.country.errors %}
-                <span style="color: red"> {{ error }}</span> {% endfor %}
-            </div>
-            <div class="row">
-                <button class="btn-large waves-effect waves-light" type="submit" name="action">Add Cuisine
-            <i class="material-icons right">add</i>
-         </button>
-            </div>
+        <button class="btn-large waves-effect waves-light" type="submit" name="action">Add Cuisine <i class="material-icons right">add</i></button> 
+        
+                                        {# Button End #}
     </form>
-    </div>
+    
+                                            {# FORM END #}
+
 </div>
 
 {% endblock %}

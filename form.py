@@ -4,6 +4,9 @@ from wtforms import validators, ValidationError
 from wtforms.validators import DataRequired
 
 
+            # ADDFORM 
+
+
 class AddForm(FlaskForm):
     cuisine = SelectField("Cuisine Name",
                                     choices = [('', 'Select a Cuisine'), 
@@ -32,6 +35,8 @@ class AddForm(FlaskForm):
         if country.data == "":
             raise ValidationError("Kindly select a country")
             
+            
+            # FORM TO ALLOW FILTER
 
 class FilterForm(FlaskForm):
     cuisine = SelectField("Cuisine Name",
