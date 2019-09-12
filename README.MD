@@ -127,6 +127,8 @@ I used fonts from **@googleapis CSS 'Overlock, Londrina+Solid'** to create diffe
 | Filter BTN     |    Yes        |     Yes    |
 | File Attach    |    Yes        |     Yes    |
 | Delete BTN     |    Yes        |     Yes    |
+| Update BTN     |    Yes        |     Yes    |
+
 
 
 
