@@ -4,42 +4,45 @@
 
 
 <h2>View Cuisine</h2>
-
-<ul>
-    {% for cuisine in cuisines %}
-    
-                        {# Calling database using jinja templates #}
-
-
-    <li class="recipe-name"> Cuisine: <span>{{cuisine.cuisine}}</span> </li>
-    <li class="country-name"> Country of origin: <span>{{cuisine.country}}</span></li>
-    <li class="allergen-type"> Allergens: <span>{{cuisine.allergens}}</span></li>
-    
-    
-                        {# Iterating Ingredient and Methods to diaplay as an array #}
+<div class="row">
+    <div class="col s12 m12 l12">
+        <ul>
+            {% for cuisine in cuisines %}
+            
+                    {# Calling database using jinja templates #}
 
 
-    <li class="ingredient-list">
-        Ingredients:
-        <ol>
-            {% for ingredient in cuisine.ingredients %}
-            <li><span> {{ingredient}} </span></li>
+            <li class="recipe-name"> Cuisine: <span>{{cuisine.cuisine}}</span> </li>
+            <li class="country-name"> Country of origin: <span>{{cuisine.country}}</span></li>
+            <li class="allergen-type"> Allergens: <span>{{cuisine.allergens}}</span></li>
+
+
+                    {# Iterating Ingredient and Methods to diaplay as an array #}
+
+
+            <li class="ingredient-list">
+                Ingredients:
+                <ol>
+                    {% for ingredient in cuisine.ingredients %}
+                    <li><span> {{ingredient}} </span></li>
+                    {% endfor %}
+                </ol>
+            </li>
+            <li class="method-list">
+                Methods:
+                <ol>
+                    {% for method in cuisine.methods %}
+                    <li><span> {{method}} </span></li>
+                    {% endfor %}
+                </ol>
+            </li>
+
+
+
             {% endfor %}
-        </ol>
-    </li>
-    <li class="method-list">
-        Methods:
-        <ol>
-            {% for method in cuisine.methods %}
-            <li><span> {{method}} </span></li>
-            {% endfor %}
-        </ol>
-    </li>
-
-
-
-    {% endfor %}
-</ul>
+        </ul>
+    </div>
+</div>
   
 
 
