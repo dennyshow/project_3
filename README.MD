@@ -26,7 +26,7 @@ This application is very easy for a user to manipulate and understand.
 
 * Navbar - Materialize was used for quick production of modern CSS and use of their predefinded classes.
 
-* Images - For this project images have been acquired via google.
+* Images - Flask werkzeug was used to allow user attach image files. Images used are acquired via google.
 
 * Card - Materialize predefinded classes was used for great UX view. 
 
@@ -280,7 +280,7 @@ All my routing is **Python valid**
 
 #### Version Used
 
-I use [GitHub](github.com) for version control. Which backup my code incase of I encounter a bug or an error that needs urgent fix. 
+I use [GitHub](github.com) for version control. Which backup my code incase I encounter a bug or an error that needs urgent fix. 
 I can easily traceback my code on GitHub.
 
 
