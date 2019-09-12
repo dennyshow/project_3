@@ -243,19 +243,25 @@ ul , ol {
     
     .main-images {
         width: 100%;
-        height:0px;
+        height:150px;
+    }
 }
+
+@media screen and (max-width: 992px) {
     
-    
+    .main-images {
+        min-height: 250px;
+    }
 }
 
 
-@media screen and (min-width: 1024px) {
+
+@media screen and (max-width: 1300px) {
 
     .main-images {
         width: 100%;
         height: 150px;
-}
+    }
 
 }
     
