@@ -7,11 +7,16 @@
 
 <ul>
     {% for cuisine in cuisines %}
+    
+                        {# Calling database using jinja templates #}
 
 
     <li class="recipe-name"> Cuisine: <span>{{cuisine.cuisine}}</span> </li>
     <li class="country-name"> Country of origin: <span>{{cuisine.country}}</span></li>
     <li class="allergen-type"> Allergens: <span>{{cuisine.allergens}}</span></li>
+    
+    
+                        {# Iterating Ingredient and Methods to diaplay as an array #}
 
 
     <li class="ingredient-list">

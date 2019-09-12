@@ -3,16 +3,20 @@
                                  {# VIEW RECIPE SECT #}
 
 <h2>View Recipe</h2>
-
 <ul>
 
     {% for recipe in recipes %}
 
-
+                                {# Calling database using jinja templates #}
+                                
     <li class="recipe-name"> Recipe: <span>{{recipe.recipe}}</span> </li>
     <li class="country-name"> Country of origin: <span>{{recipe.country}}</span></li>
     <li class="allergen-type"> Allergens: <span>{{recipe.allergens}}</span></li>
-
+    
+    
+    
+    
+                            {# Iterating Ingredient and Methods to diaplay as an array #}
 
     <li class="ingredient-list">
         Ingredients:
@@ -35,6 +39,7 @@
 
     {% endfor %}
 </ul>
+
   
 
 
