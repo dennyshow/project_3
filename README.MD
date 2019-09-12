@@ -70,7 +70,7 @@ This site is supported on all browsers. Check below for tested devices and brows
 ### Frameworks used 
 
 * [Materialize 0.100.2](https://materializecss.com/)
-* [Materize Icon](https://material.io/)
+* [Material Icon](https://material.io/)
 * [JQuery 3.2.1](https://jquery.com/download/)
 * [Flask](https://flask.palletsprojects.com)
 
@@ -126,7 +126,7 @@ I used fonts from **@googleapis CSS 'Overlock, Londrina+Solid'** to create diffe
 | Edit BTN       |    Yes        |     Yes    |
 | Filter BTN     |    Yes        |     Yes    |
 | File Attach    |    Yes        |     Yes    |
-| Link BTN       |    Yes        |     Yes    |
+| Delete BTN     |    Yes        |     Yes    |
 
 
 
@@ -141,7 +141,8 @@ I used fonts from **@googleapis CSS 'Overlock, Londrina+Solid'** to create diffe
 | Edit BTN       |    Yes        |     Yes    |
 | Filter BTN     |    Yes        |     Yes    |
 | File Attach    |    Yes        |     Yes    |
-| Link BTN       |    Yes        |     Yes    |
+| Delete BTN     |    Yes        |     Yes    |
+| Update BTN     |    Yes        |     Yes    |
 
 
 
@@ -156,7 +157,8 @@ I used fonts from **@googleapis CSS 'Overlock, Londrina+Solid'** to create diffe
 | Edit BTN       |    Yes        |     Yes    |
 | Filter BTN     |    Yes        |     Yes    |
 | File Attach    |    Yes        |     Yes    |
-| Link BTN       |    Yes        |     Yes    |
+| Delete BTN     |    Yes        |     Yes    |
+| Update BTN     |    Yes        |     Yes    |
 
 
 
@@ -171,7 +173,8 @@ I used fonts from **@googleapis CSS 'Overlock, Londrina+Solid'** to create diffe
 | Edit BTN       |    Yes        |     Yes    |
 | Filter BTN     |    Yes        |     Yes    |
 | File Attach    |    Yes        |     Yes    |
-| Link BTN       |    Yes        |     Yes    |
+| Delete BTN     |    Yes        |     Yes    |
+| Update BTN     |    Yes        |     Yes    |
 
 
 
@@ -186,7 +189,8 @@ I used fonts from **@googleapis CSS 'Overlock, Londrina+Solid'** to create diffe
 | Edit BTN       |    Yes        |     Yes    |
 | Filter BTN     |    Yes        |     Yes    |
 | File Attach    |    Yes        |     Yes    |
-| Link BTN       |    Yes        |     Yes    |
+| Delete BTN     |    Yes        |     Yes    |
+| Update BTN     |    Yes        |     Yes    |
 
 
 
@@ -201,7 +205,8 @@ I used fonts from **@googleapis CSS 'Overlock, Londrina+Solid'** to create diffe
 | Edit BTN       |    Yes        |     Yes    |
 | Filter BTN     |    Yes        |     Yes    |
 | File Attach    |    Yes        |     Yes    |
-| Link BTN       |    Yes        |     Yes    |
+| Delete BTN     |    Yes        |     Yes    |
+| Update BTN     |    Yes        |     Yes    |
 
 
 
@@ -217,7 +222,8 @@ I used fonts from **@googleapis CSS 'Overlock, Londrina+Solid'** to create diffe
 | Edit BTN       |    Yes        |     Yes    |
 | Filter BTN     |    Yes        |     Yes    |
 | File Attach    |    Yes        |     Yes    |
-| Link BTN       |    Yes        |     Yes    |
+| Delete BTN     |    Yes        |     Yes    |
+| Update BTN     |    Yes        |     Yes    |
 
 
 
@@ -232,7 +238,8 @@ I used fonts from **@googleapis CSS 'Overlock, Londrina+Solid'** to create diffe
 | Edit BTN       |    Yes        |     Yes    |
 | Filter BTN     |    Yes        |     Yes    |
 | File Attach    |    Yes        |     Yes    |
-| Link BTN       |    Yes        |     Yes    |
+| Delete BTN     |    Yes        |     Yes    |
+| Update BTN     |    Yes        |     Yes    |
 
 
 
