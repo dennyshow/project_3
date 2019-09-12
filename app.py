@@ -1,3 +1,5 @@
+                # Flask packages imports
+
 import os
 from flask import Flask, render_template, redirect, request, url_for, current_app, jsonify
 from flask_pymongo import PyMongo
